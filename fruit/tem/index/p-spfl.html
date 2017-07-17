@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_PATH}common.css">
+    <link rel="stylesheet" href="{CSS_PATH}p-spfl.css">
+    <script src="{JS_PATH}iscroll.js"></script>
+    <script src="{JS_PATH}common.js"></script>
+    <script type="text/javascript" src="{JS_PATH}demoUtils.js"></script>
+</head>
+<body>
+<div class="top">
+    <p style="font-size: 15px">·分类·</p>
+    <p style="font-size: 12px">SHAPFENLEI</p>
+</div>
+<div style="height: 50px;width: 100%"></div>
+
+<div class="iscroll">
+    <div class="zhuti">
+        <div class="list">
+            {foreach $result as $v}
+            <a href="index.php?m=index&f=lists&a=dapei">
+                <div class="box">
+                    <img src="{$v['cthumb']}" alt="">
+                    <p>#{$v['cname']}</p>
+                    <p>{$v['cenglishname']}</p>
+                    <div class="num">{$v['num']}</div>
+                </div>
+            </a>
+            {/foreach}
+            {foreach $result2 as $v}
+            <a href="index.php?m=index&f=lists&a=add">
+                <div class="box">
+                    <img src="{$v['cthumb']}" alt="">
+                    <p>#{$v['cname']}</p>
+                    <p>{$v['cenglishname']}</p>
+                    <div class="num">{$v['num']}</div>
+                </div>
+            </a>
+            {/foreach}
+            <!--<a href="p-list.html">-->
+                <!--<div class="box">-->
+                    <!--<img src="{IMG_PATH}p-f3_03.png" alt="">-->
+                    <!--<p>#热带水果</p>-->
+                    <!--<p>redaishuiguozhenhaochi</p>-->
+                    <!--<div class="num">3.</div>-->
+                <!--</div>-->
+            <!--</a>-->
+            <!--<a href="p-list.html">-->
+                <!--<div class="box">-->
+                    <!--<img src="{IMG_PATH}p-f4_03.png" alt="">-->
+                    <!--<p>#进口水果</p>-->
+                    <!--<p>jinkoushuiguobuzai</p>-->
+                    <!--<div class="num">4.</div>-->
+                <!--</div>-->
+            <!--</a>-->
+        </div>
+    </div>
+</div>
+{include "footer1.html"}
+<script>
+    window.onload=function () {
+        var myScroll = new IScroll('.iscroll',
+            {
+                mouseWheel: true,
+                click:true,
+            });
+    }
+
+</script>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{CSS_PATH}common.css">
+    <link rel="stylesheet" href="{CSS_PATH}yzf-index.css">
+    <link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
+    <script src="{JS_PATH}jquery.min.js"></script>
+    <script src="{JS_PATH}iscroll.js"></script>
+    <script src="{JS_PATH}swiper.min.js"></script>
+    <script src="{JS_PATH}common.js"></script>
+    <script src="{JS_PATH}yzf-index.js"></script>
+    <title>首页</title>
+</head>
+<body>
+    <!--顶部-->
+    <header>
+        <a href="javascript:;"></a>
+        <a href="index.php?m=index&f=search&a=add"><img src="{IMG_PATH}index2_05.png" alt=""></a>
+        <div class="yzf-font1">
+            <span></span>
+            <span></span>
+            <p>送青来</p>
+            <p class="yzf-font2">SONG QINGLAI</p>
+        </div>
+    </header>
+    <!--轮播-->
+    <div class="scrolls">
+        <div class="zhuti">
+            <div class="swiper-container swiper1">
+                <div class="swiper-wrapper">
+                    {foreach $banner as $v}
+                    <a class="swiper-slide" href="index.php?m=index&f=lists&a=add">
+                        <div >
+                            <img src="{$v['thumb']}">
+                        </div>
+                    </a>
+                    {/foreach}
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--推荐-->
+                    <!--推荐标题-->
+            <div class="yzf-tjtitle">
+                <section class="active">
+                    <span></span>
+                    <span></span>
+                    <p class="yzf-tjtitlefont">热卖推荐</p>
+                    <p class="yzf-tjtitlefont2"><b>REMAI</b>TUIJIAN</p>
+                </section>
+                <section>
+                    <span></span>
+                    <span></span>
+                    <p class="yzf-tjtitlefont">特价推荐</p>
+                    <p class="yzf-tjtitlefont2"><b>TEJIA</b>TUIJIAN</p>
+                </section>
+                <img src="{IMG_PATH}index_03.png" alt="">
+            </div>
+                    <!--推荐内容-->
+            <div class="yzf-tjcon">
+                <!--第二个内容-->
+                <div class="yzf-titwo">
+                    <div class="swiper-container swiper2">
+                        <div class="swiper-wrapper">
+                            {foreach $lunbo as $v}
+                            <section class="swiper-slide">
+                                <div class="yzf-bj">
+                                    <div class="yzf-list">
+                                        <img src=" {$v['thumb']} " alt="">
+                                        <p>{$v['title']}</p>
+                                        <span><b>GANNAN</b>QICHENG</span>
+                                        <img class="yzf-zan" src="{IMG_PATH}index_19.png" alt="">
+                                        <span class="yzf-num">{$v['kucun']}</span>
+                                        <img class="yzf-zan" src="{IMG_PATH}index_21.png" alt="">
+                                        <span class="yzf-num">{$v['price']}</span>
+                                    </div>
+                                </div>
+                            </section>
+                            {/foreach}
+                        </div>
+                    </div>
+                </div>
+                <!--第一个内容-->
+                <div class="yzf-tione">
+                    <div class="swiper-container swiper3">
+                        <div class="swiper-wrapper">
+                            {foreach $lunbo as $v}
+                            <section class="swiper-slide">
+                                <div class="yzf-bj">
+                                    <div class="yzf-list">
+                                        <img src="{$v['thumb']}" alt="">
+                                        <p>{$v['title']}</p>
+                                        <span><b>GANNAN</b>QICHENG</span>
+                                        <img class="yzf-zan" src="{IMG_PATH}index_19.png" alt="">
+                                        <span class="yzf-num">{$v['kucun']}</span>
+                                        <img class="yzf-zan" src="{IMG_PATH}index_21.png" alt="">
+                                        <span class="yzf-num">{$v['price']}</span>
+                                    </div>
+                                </div>
+                            </section>
+                            {/foreach}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--热卖板块-->
+            <section class="yzf-hot">
+                <div class="biao">
+                    <img src="{IMG_PATH}p-l1_02.png">
+                </div>
+                {foreach $result as $v}
+                <div class="list">
+                    <a href="index.php?m=index&f=show&a=add">
+                        <div class="left" style="overflow: hidden">
+                            <img src="{$v['thumb']}" alt="" style="height:100%;border-radius: 0.2rem">
+                        </div>
+                        <div class="right">
+                            <p><b> {$v['jiacu']} </b> {$v['Engtitle']} </p>
+                            <p>{$v['title']}</p>
+                            <p>草莓营养价值丰富，被誉为是“水果皇后”含有丰富的维生素维。</p>
+                            <div class="one">
+                                <img src="{IMG_PATH}p-zan.png">
+                                <span>{$v['kucun']}</span>
+                            </div>
+                            <div class="two">
+                                <p>RMB:<b style="margin-left: .1rem">{$v['price']}</b></p>
+                                <div class="buy">立即购买</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {/foreach}
+            </section>
+        </div>
+    </div>
+
+    <!--底部-->
+{include "footer.html"}

@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_PATH}common.css">
+    <link rel="stylesheet" href="{CSS_PATH}p-list.css">
+    <script src="{JS_PATH}common.js"></script>
+    <script src="{JS_PATH}iscroll.js"></script>
+</head>
+<body>
+<div class="top">
+    <span></span>
+    <span></span>
+    <p style="font-size: 15px">分类</p>
+    <p style="font-size: 12px">SHAPFENLEI</p>
+    <a href="javascript:;" onclick="history.go(-1)"> <img class="hou" src="{IMG_PATH}p-hou.png"></a>
+    <div style="height: 50px;width: 100%"></div>
+</div>
+
+<div class="iscroll">
+    <div class="zhuti">
+        <div class="biao">
+            <img src="{IMG_PATH}p-l1_02.png">
+        </div>
+        {foreach $result as $v}
+        <div class="list">
+            <a href="index.php?m=index&f=show&a=add">
+                <div class="left" style="overflow: hidden">
+                    <img src="{$v['thumb']}" alt="" style="height:100%;border-radius: 0.2rem">
+                </div>
+                <div class="right">
+                    <p><b> {$v['jiacu']} </b> {$v['Engtitle']} </p>
+                    <p>{$v['title']}</p>
+                    <p>草莓营养价值丰富，被誉为是“水果皇后”含有丰富的维生素维。</p>
+                    <div class="one">
+                        <img src="{IMG_PATH}p-zan.png">
+                        <span>{$v['kucun']}</span>
+                    </div>
+                    <div class="two">
+                        <p>RMB:<b style="margin-left: .1rem">{$v['price']}</b></p>
+                        <div class="buy">立即购买</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {/foreach}
+    </div>
+</div>
+{include "footer1.html"}
+<script>
+    window.onload=function () {
+        var myScroll = new IScroll('.iscroll',
+            {
+                mouseWheel: true,
+                click:true,
+            });
+    }
+
+</script>

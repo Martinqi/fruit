@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <link rel="stylesheet" href="../static/css/common.css">-->
+    <title>Document</title>
+    <style>
+        body{
+            background:#F0F0F0;
+        }
+        ul.box{
+            width:600px;
+            height:auto;
+            border:1px solid #ccc;
+            margin: 30px auto 30px auto;
+            padding:20px;
+        }
+        ul{
+            margin-bottom:10px;
+            color:#000;
+        }
+        ul li:first-child{
+
+        }
+        ul li span:first-child{
+            color:#277FC9;
+            font-size:16px;
+        }
+        ul li span:nth-child(2){
+            color:#000;
+            font-size:14px;
+            margin-left:15px;
+        }
+        ul li a{
+            color:red;
+            font-size:14px;
+            text-decoration: none;
+        }
+        ul li div{
+            color:#000;
+            font-size:14px;
+            margin-left:50px;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    {$obj->str?}
+</ul>
+</body>
+</html>

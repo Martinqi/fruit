@@ -1,0 +1,36 @@
+footer{
+    width: 100%;
+    height: 0.98rem;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #2f2728;
+}
+footer a{
+    display:block;
+    width:25%;
+    height:100%;
+    box-sizing: border-box;
+    text-align: center;
+    background:#2f2728;
+}
+footer a.action{
+    background:#fe464e;
+}
+footer a img{
+    width:0.58rem;
+    display: block;
+    margin:0.05rem auto;
+}
+footer a section{
+    font-size:0.2rem;
+}
+footer a p{
+    display: block;
+    color:#fff;
+    margin:-0.05rem auto;
+    font-size:0.2rem;
+}

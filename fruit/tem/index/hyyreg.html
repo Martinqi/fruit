@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="stylesheet" href="{CSS_PATH}common.css">
+    <script src="{JS_PATH}common.js"></script>
+    <link rel="stylesheet" href="{CSS_PATH}hyyreg.css">
+    <script src="{JS_PATH}zepto.js"></script>
+    <script src="{JS_PATH}jquery.min.js"></script>
+    <script src="{JS_PATH}touch.min.js"></script>
+    <script src="{JS_PATH}jquery.validate.js"></script>
+    <script src="{JS_PATH}hyyindex.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="javascript" onclick="history.go(-1)">&lt;</a>
+    </nav>
+    <form class="input">
+        <div class="label">
+            <span>用户名</span> <span class="first">YONGHU</span>
+            <input class="user" name="mname" type="text" placeholder="请输入用户名" >
+            <img src="{IMG_PATH}hyyiconuser.png" alt="">
+        </div>
+        <p></p>
+        <div class="label">
+            <span>手机号</span> <span class="first">SHOJIH</span>
+            <input class="user" name="phonenum" type="text" placeholder="请输入手机号" >
+            <img src="{IMG_PATH}hyyiconuser.png" alt="">
+        </div>
+        <p></p>
+        <div class="label">
+            <span class="mi">密码</span> <span class="first">MIMASH</span>
+            <input class="pass mpass" name="mpass" type="password" placeholder="请输入密码">
+            <img src="{IMG_PATH}hyyiconpass.png" alt="">
+        </div>
+        <p></p>
+        <div class="label">
+            <span class="mi">验证码</span> <span class="first">YANXHENG</span>
+            <input class="pass" name="code" type="text" placeholder="请输入验证码">
+            <img src="{SELF_PATH}?m=index&f=login&a=code" alt="" onclick=this.src="{SELF_PATH}?m=index&f=login&a=code&c="+Math.random() style="height: 0.7rem">
+        </div>
+    </form>
+    <div class="loginbtn willReg">注册</div>
+</body>
+</html>
